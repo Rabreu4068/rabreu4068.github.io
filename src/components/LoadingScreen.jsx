@@ -2,15 +2,26 @@ import { useEffect, useState } from "react";
 
 export const LoadingScreen = ({ onComplete }) => {
   const [text, setText] = useState("");
-  const fullText = "<Hello Wolrd />";
+  const fullText = [
+    "<Why she put cheese on my cheese burger?/>",
+    "<Initializing my chungus world/>",
+    "<Sometimes I wonder why/>",
+    "<Why what?/>",
+    "<Title card/>",
+    "<Why are flamingos pink?/>",
+    "<Hi Mom 🙋🏽‍♂️/>",
+    "<Are you sure?/>",
+  ];
 
   useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * fullText.length);
+    const message = fullText[randomIndex];
     let index = 0;
     const interval = setInterval(() => {
-      setText(fullText.substring(0, index));
+      setText(message.substring(0, index));
       index++;
 
-      if (index > fullText.length) {
+      if (index > message.length) {
         clearInterval(interval);
 
         setTimeout(() => {
