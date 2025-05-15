@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import AnimatedTitle from '../'
 
 export const Home = () => {
   return (
