@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Space Grotesk", sans-serif;
-  background: #0a0a0a;
+  background: #eee8e8;
   color: #f3f4f6;
 }
 
@@ -47,4 +47,16 @@ body {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@keyframes rainbowBorder {
+  0% { box-shadow: 0 0 10px red; }
+  25% { box-shadow: 0 0 10px orange; }
+  50% { box-shadow: 0 0 10px lime; }
+  75% { box-shadow: 0 0 10px blue; }
+  100% { box-shadow: 0 0 10px violet; }
+}
+
+.rainbow-hover:hover {
+  animation: rainbowBorder 2s infinite linear;
 }
